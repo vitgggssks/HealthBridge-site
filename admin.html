@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Особистий кабінет — Violla</title><style>
+<title>Адмін панель — Violla</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--g:#1D7457;--gd:#123B2B;--mint:#EAF5F0;--bg:#F3F8F6;--bd:#E0EDE7;--tx:#17332B;--mu:#6E8B83;--star:#F0A734}
 html{scroll-behavior:smooth}
@@ -79,39 +79,28 @@ label.lbl:first-child{margin-top:0}
 </style></head><body>
 <header class="top"><div class="hwrap">
 <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 21C3 11.1 11.1 3 21 3c0 9.9-8.1 18-18 18z" fill="#1D7457"/><path d="M7 17C10 12 14 8 19 5" stroke="#EAF5F0" stroke-width="1.4" stroke-linecap="round"/></svg><span style="font-size:21px;font-weight:800">Violla</span><span>Здоров'я · Гармонія · Життя</span></a>
-<nav class="main"><a href="index.html" class="act">Головна</a><a href="search.html">Пошук</a><a href="search.html">Професіонали</a><a href="clinics.html">Клініки</a><a href="directions.html">Методи</a><a href="about.html">Про платформу</a></nav>
+<nav class="main"><a href="index.html">Головна</a><a href="search.html">Пошук</a><a href="search.html">Професіонали</a><a href="clinics.html">Клініки</a><a href="directions.html">Методи</a><a href="about.html" class="act">Про платформу</a></nav>
 <div class="hright"><a class="ic" href="settings.html" title="Мова">🌐 UA ▾</a><a class="ic" href="favorites.html">♡</a><a class="ic" href="messages.html">🔔</a><a class="login" href="login.html">👤 Увійти</a></div>
 </div></header>
 <main class="wrap" style="padding:26px 24px 50px">
-<h1 class="page">Особистий кабінет</h1>
 <div style="display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap">
-<div class="card sidebar" style="padding:18px;text-align:center">
-<div style="width:96px;height:96px;border-radius:48px;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:800;color:var(--g);margin:4px auto 10px">А</div>
-<b style="font-size:17px">Анна Коваленко</b>
-<div class="mut" style="font-size:12.5px;margin:4px 0 12px">anna@gmail.com</div>
-<span class="chip">Пацієнт</span>
-<div style="text-align:left;margin-top:18px">
-<a class="sn on" href="cabinet.html">👤 Особисті дані</a>
-<a class="sn" href="appointments.html">📅 Мої записи</a>
-<a class="sn" href="favorites.html">♡ Обране</a>
-<a class="sn" href="messages.html">💬 Повідомлення</a>
-<a class="sn" href="settings.html">⚙️ Налаштування</a></div></div>
-<div style="flex:1;min-width:300px">
-<div class="card" style="padding:20px;margin-bottom:14px"><b style="color:var(--gd)">👤 Особисті дані</b>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-<div><label class="lbl">Ім'я</label><input class="in" value="Анна"/></div>
-<div><label class="lbl">Прізвище</label><input class="in" value="Коваленко"/></div>
-<div><label class="lbl">Телефон</label><input class="in" value="+380 67 000 00 00"/></div>
-<div><label class="lbl">Email</label><input class="in" value="anna@gmail.com"/></div>
-<div><label class="lbl">Місто</label><input class="in" value="Київ"/></div>
-<div><label class="lbl">Дата народження</label><input class="in" value="1990-01-15"/></div></div>
-<button class="btn pri sm" style="margin-top:14px">Зберегти</button></div>
-<div class="card" style="padding:20px;margin-bottom:14px"><b style="color:var(--gd)">📅 Найближчі записи</b>
-<div style="font-size:13.5px;margin-top:10px">1 жовтня, 14:30 — Олена Коваленко (невролог) <a href="appointments.html">деталі →</a></div>
-<div style="font-size:13.5px;margin-top:6px">3 жовтня, 11:00 — Іван Петренко (кардіолог)</div></div>
-<div class="card" style="padding:20px"><b style="color:var(--gd)">📄 Медичні документи</b>
-<div style="font-size:13.5px;margin-top:10px">🧾 Висновок невролога від 21.09.2026 — <a href="#">завантажити</a></div>
-<div style="font-size:13.5px;margin-top:6px">🩸 Загальний аналіз крові від 05.09.2026 — <a href="#">завантажити</a></div></div>
+<div class="card sidebar" style="padding:14px 10px">
+<b style="display:block;padding:10px 12px;color:var(--gd)">Адмін панель</b>
+<a class="sn on" href="admin.html">📊 Дашборд</a>
+<a class="sn" href="admin.html">👨‍⚕️ Спеціалісти</a>
+<a class="sn" href="admin.html">🧑‍🤝‍🧑 Пацієнти</a>
+<a class="sn" href="admin.html">🏥 Клініки</a>
+<a class="sn" href="admin.html">📋 Записи</a>
+<a class="sn" href="admin.html">🛠️ Послуги</a>
+<a class="sn" href="admin.html">💬 Коментарі</a>
+<a class="sn" href="settings.html">⚙️ Налаштування</a></div>
+<div style="flex:1;min-width:320px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:16px">
+<div class="card" style="padding:16px"><div class="mut" style="font-size:12px">Користувачів</div><div style="font-size:23px;font-weight:800;color:var(--gd)">12 458</div></div><div class="card" style="padding:16px"><div class="mut" style="font-size:12px">Спеціалістів</div><div style="font-size:23px;font-weight:800;color:var(--gd)">3 215</div></div><div class="card" style="padding:16px"><div class="mut" style="font-size:12px">Записів за тиждень</div><div style="font-size:23px;font-weight:800;color:var(--gd)">2 842</div></div><div class="card" style="padding:16px"><div class="mut" style="font-size:12px">Клінік</div><div style="font-size:23px;font-weight:800;color:var(--gd)">486</div></div>
+</div>
+<div class="card" style="padding:6px 0">
+<div style="display:flex;gap:12px;padding:12px 18px;border-bottom:1px solid var(--bd);font-size:13.5px;align-items:center"><span style="flex:1">Іван Петренко — новий профіль</span><span class="mut">Сьогодні</span><span class="chip" style="font-size:10.5px;background:var(--mint);color:var(--g)">Додано ✓</span></div><div style="display:flex;gap:12px;padding:12px 18px;border-bottom:1px solid var(--bd);font-size:13.5px;align-items:center"><span style="flex:1">Марія Сидоренко — оновила послуги</span><span class="mut">Сьогодні</span><span class="chip" style="font-size:10.5px;background:#EAF0FB;color:#2f5fb3">Оновлено</span></div><div style="display:flex;gap:12px;padding:12px 18px;border-bottom:1px solid var(--bd);font-size:13.5px;align-items:center"><span style="flex:1">Клініка «Vital» — нові документи</span><span class="mut">Вчора</span><span class="chip" style="font-size:10.5px;background:#FBF3DF;color:#a3781a">На перевірці</span></div><div style="display:flex;gap:12px;padding:12px 18px;border-bottom:1px solid var(--bd);font-size:13.5px;align-items:center"><span style="flex:1">Андрій Бойко — підтвердження диплома</span><span class="mut">Вчора</span><span class="chip" style="font-size:10.5px;background:var(--mint);color:var(--g)">Додано ✓</span></div>
+<div style="padding:10px 18px;text-align:center"><a href="#" style="font-size:13px">Показати ще →</a></div></div>
 </div></div>
 </main>
 <footer><div class="fwrap">

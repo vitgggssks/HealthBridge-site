@@ -1,119 +1,108 @@
 <!DOCTYPE html>
 <html lang="uk"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Вхід — HealthBridge</title><style>
+<title>Вхід — Violla</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--g:#0c6a4e;--gd:#085339;--gl:#e8f4ef;--bg:#f4f8f6;--tx:#14312b;--mu:#6f8a82;--bd:#d9e8e1}
-body{font-family:'Segoe UI',Ubuntu,Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.45}
-.container{max-width:1180px;margin:0 auto;padding:0 22px}
-header{background:#fff;border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:50;box-shadow:0 1px 8px rgba(20,49,43,.05)}
-.hwrap{max-width:1180px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:26px}
-.logo{display:flex;align-items:center;gap:8px;font-size:21px;font-weight:800;color:var(--g);text-decoration:none}
-.logo .mark{width:34px;height:34px;background:var(--g);color:#fff;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px}
-nav.main{display:flex;gap:20px;margin-left:8px;flex-wrap:wrap}
-nav.main a{color:var(--tx);text-decoration:none;font-size:15px;padding:6px 2px}
+:root{--g:#1D7457;--gd:#123B2B;--mint:#EAF5F0;--bg:#F3F8F6;--bd:#E0EDE7;--tx:#17332B;--mu:#6E8B83;--star:#F0A734}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Ubuntu,Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.45;font-size:15px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+a{color:var(--g)}
+header.top{background:#fff;border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:60;box-shadow:0 2px 10px rgba(23,51,43,.04)}
+.hwrap{max-width:1240px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:26px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--gd)}
+.brand b{font-size:21px;font-weight:800;letter-spacing:.2px}
+.brand span{font-size:10.5px;color:var(--mu);display:block;margin-top:-2px}
+nav.main{display:flex;gap:22px;alignItems:center}
+nav.main a{color:var(--tx);text-decoration:none;font-size:14.5px;padding:8px 0;position:relative}
 nav.main a:hover{color:var(--g)}
-nav.main a.act{color:var(--g);font-weight:700;border-bottom:2px solid var(--g)}
-.hbtns{margin-left:auto;display:flex;gap:10px;align-items:center}
-.btn{display:inline-block;background:var(--g);color:#fff;border:none;padding:11px 22px;border-radius:11px;font-size:14.5px;font-weight:600;text-decoration:none;cursor:pointer;font-family:inherit;box-shadow:0 2px 6px rgba(12,106,78,.25)}
-.btn:hover{background:var(--gd)}
-.btn.ghost{background:#fff;color:var(--g);border:1.5px solid var(--g);box-shadow:none}
-.btn.ghost:hover{background:var(--gl)}
+nav.main a.act{color:var(--g);font-weight:700}
+nav.main a.act:after{content:'';position:absolute;left:0;right:0;bottom:2px;height:2.5px;background:var(--g);border-radius:3px}
+.hright{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:14px}
+.hright .ic{color:var(--tx);text-decoration:none;opacity:.75}
+.hright .ic:hover{opacity:1;color:var(--g)}
+.login{background:var(--gd);color:#fff;text-decoration:none;padding:9px 18px;border-radius:10px;font-weight:600;font-size:14px}
+.login:hover{background:#0d2d20}
+.btn{display:inline-block;background:var(--gd);color:#fff;border:none;padding:11px 22px;border-radius:11px;font-size:14.5px;font-weight:600;text-decoration:none;cursor:pointer;font-family:inherit}
+.btn:hover{background:#0d2d20}
+.btn.pri{background:var(--g)} .btn.pri:hover{background:#176049}
+.btn.ghost{background:#fff;color:var(--gd);border:1.5px solid #CFE3DA;text-decoration:none}
+.btn.ghost:hover{background:var(--mint)}
 .btn.sm{padding:8px 16px;font-size:13.5px}
-.btn.light{background:var(--gl);color:var(--g);box-shadow:none}
-.searchbar{display:flex;gap:10px;background:#fff;border:1.5px solid var(--bd);border-radius:14px;padding:10px;box-shadow:0 6px 22px rgba(20,49,43,.08)}
-.searchbar input,.searchbar select{flex:1;border:1px solid var(--bd);border-radius:9px;padding:11px 14px;font-size:14.5px;font-family:inherit;outline:none;background:#fff;color:var(--tx)}
-.searchbar input:focus,.searchbar select:focus{border-color:var(--g)}
-section{padding:34px 0}
-h1.page{font-size:27px;margin-bottom:14px}
-h2.sec{font-size:22px;margin-bottom:18px;color:var(--tx)}
-.grid4{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:18px}
-.card{background:#fff;border:1px solid #e4efe9;border-radius:16px;padding:20px;box-shadow:0 3px 12px rgba(20,49,43,.05)}
-.card a{text-decoration:none;color:inherit}
-.doccard{display:flex;gap:16px;align-items:flex-start}
-.avatar{width:86px;height:86px;border-radius:14px;object-fit:cover}
-.avatarinit{width:86px;height:86px;border-radius:14px;background:var(--gl);color:var(--g);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:26px}
-.docname{font-size:17px;font-weight:800}
-.spec{color:var(--mu);font-size:13.5px;margin:2px 0}
-.rating{color:#e8a13c;font-size:13.5px;font-weight:700}
-.verified{color:var(--g);font-weight:700}
-.price{display:inline-block;background:var(--gl);color:var(--g);font-weight:800;border-radius:9px;padding:5px 12px;font-size:14px;margin-top:6px}
-.dir{display:block;background:#fff;border:1px solid #e4efe9;border-radius:14px;padding:18px 18px;text-decoration:none;color:var(--tx);box-shadow:0 3px 12px rgba(20,49,43,.05)}
-.dir:hover{border-color:var(--g);transform:translateY(-2px);transition:.15s}
-.dir .ic{font-size:26px}
-.dir b{display:block;margin-top:8px;font-size:15.5px}
-.dir span{font-size:13px;color:var(--mu)}
-.hero{position:relative;border-radius:20px;overflow:hidden;min-height:340px;display:flex;align-items:center;color:#fff}
-.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.55)}
-.hero .inner{position:relative;padding:46px;max-width:660px}
-.hero h1{font-size:36px;line-height:1.18;margin-bottom:12px}
-.hero p{font-size:16.5px;opacity:.93;margin-bottom:22px}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.step{background:#fff;border:1px solid #e4efe9;border-radius:16px;padding:22px;box-shadow:0 3px 12px rgba(20,49,43,.05)}
-.step .n{width:38px;height:38px;border-radius:12px;background:var(--g);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;margin-bottom:12px}
-.step b{font-size:16px}
-.step p{font-size:13.5px;color:var(--mu);margin-top:6px}
-.formrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
-.formrow.one{grid-template-columns:1fr}
-label.in{display:block;font-size:13px;font-weight:700;color:var(--mu);margin-bottom:5px}
-input.in,select.in,textarea.in{width:100%;border:1.5px solid var(--bd);border-radius:10px;padding:11px 14px;font-size:14.5px;font-family:inherit;background:#fff;color:var(--tx);outline:none}
+.chip{display:inline-block;background:var(--mint);color:var(--g);border-radius:999px;padding:3px 12px;font-size:12.5px;font-weight:700}
+.card{background:#fff;border:1px solid var(--bd);border-radius:16px;box-shadow:0 3px 14px rgba(23,51,43,.05)}
+h1.page{font-size:26px;margin-bottom:10px;color:var(--gd)}
+h2.sec{font-size:21px;margin-bottom:16px;color:var(--gd)}
+.mut{color:var(--mu)}
+.slots .tm{display:inline-block;background:#fff;border:1.5px solid var(--bd);border-radius:9px;padding:7px 13px;margin:0 7px 7px 0;font-size:13.5px;text-decoration:none;color:var(--tx)}
+.slots .tm:hover,.slots .tm.on{border-color:var(--g);color:var(--g);font-weight:700}
+.star{color:var(--star);font-weight:700}
+.procards{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:16px}
+.pcard{background:#fff;border:1px solid var(--bd);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 3px 14px rgba(23,51,43,.05);position:relative}
+.pcard:hover{transform:translateY(-3px);transition:.15s;box-shadow:0 8px 22px rgba(23,51,43,.12)}
+.pcard .ph{display:block;width:100%;height:150px;object-fit:cover;object-position:top}
+.pcard .bm{position:absolute;top:10px;right:10px;background:#fff;border-radius:9px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 1px 5px rgba(0,0,0,.1)}
+.pcard .pbody{padding:13px 14px 14px}
+.pcard .tag{position:absolute;top:10px;left:10px;background:var(--mint);color:var(--g);font-size:11px;font-weight:800;border-radius:7px;padding:3px 9px}
+.pcard .nm{font-weight:800;font-size:15px}
+.pcard .sp{font-size:12.5px;color:var(--mu)}
+.pcard .mchips{margin:7px 0 6px;display:flex;flex-wrap:wrap;gap:5px}
+.pcard .mchips span{background:#F2F8F5;border:1px solid var(--bd);border-radius:7px;font-size:11px;padding:2px 8px;color:var(--mu)}
+.pcard .geo{font-size:12px;color:var(--mu)}
+.pcard .rate{font-size:12.5px;margin-top:3px}
+.pcard .slotbtn{display:block;background:var(--gd);color:#fff;text-align:center;border-radius:9px;padding:8px;font-size:13px;font-weight:600;margin-top:10px;text-decoration:none}
+.ccards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+footer{background:#123B2B;color:#cfe5da;margin-top:48px}
+.fwrap{max-width:1240px;margin:0 auto;padding:32px 24px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:26px;font-size:13.5px}
+.fwrap b{color:#fff;display:block;margin-bottom:10px}
+.fwrap a{color:#cfe5da;text-decoration:none;display:block;margin-bottom:6px;font-size:13px}
+.fwrap a:hover{color:#fff}
+.copy{max-width:1240px;margin:0 auto;padding:13px 24px;border-top:1px solid rgba(255,255,255,.13);font-size:12px;opacity:.65}
+.filterbox{padding:16px}
+.filterbox h3{font-size:14.5px;margin-bottom:9px;color:var(--gd)}
+.checkrow{display:block;font-size:13.5px;margin-bottom:6px;color:var(--tx)}
+input.in,select.in,textarea.in{width:100%;border:1.5px solid var(--bd);border-radius:10px;padding:10px 13px;font-size:14px;font-family:inherit;background:#fff;color:var(--tx);outline:none}
 input.in:focus,select.in:focus,textarea.in:focus{border-color:var(--g)}
-.filters{width:270px;flex-shrink:0}
-.filters .card{padding:16px}
-.fltside{display:flex;gap:22px;align-items:flex-start}
-.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-.tab{background:#fff;border:1px solid var(--bd);border-radius:10px;padding:8px 18px;font-size:14px;text-decoration:none;color:var(--tx)}
-.tab.on{background:var(--g);color:#fff;border-color:var(--g);font-weight:700}
-.badgeok{display:inline-block;background:var(--gl);color:var(--g);border-radius:999px;font-size:12.5px;font-weight:700;padding:3px 12px}
-.slots{display:flex;flex-wrap:wrap;gap:8px}
-.slot{background:#fff;border:1.5px solid var(--bd);border-radius:9px;padding:8px 14px;font-size:13.5px;cursor:pointer;text-decoration:none;color:var(--tx)}
-.slot:hover{border-color:var(--g);color:var(--g)}
-.msglist{width:320px;flex-shrink:0;border-right:1px solid var(--bd)}
-.msgitem{display:flex;gap:12px;padding:14px;border-bottom:1px solid #edf3f0;text-decoration:none;color:inherit}
-.msgitem:hover{background:var(--gl)}
-.chat{flex:1;padding:18px}
-.bubble{max-width:66%;padding:10px 15px;border-radius:14px;font-size:14px;margin-bottom:10px}
+label.lbl{display:block;font-size:12.5px;font-weight:700;color:var(--mu);margin:12px 0 5px}
+label.lbl:first-child{margin-top:0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs .t{background:#fff;border:1px solid var(--bd);border-radius:10px;padding:7px 16px;font-size:13.5px;text-decoration:none;color:var(--tx)}
+.tabs .t.on{background:var(--gd);color:#fff;border-color:var(--gd);font-weight:700}
+.sidebar{width:250px;flex-shrink:0}
+.sidebar .sn{display:flex;gap:11px;align-items:center;padding:11px 14px;border-radius:11px;color:var(--tx);text-decoration:none;font-size:14px;margin-bottom:4px}
+.sidebar .sn:hover{background:var(--mint)}
+.sidebar .sn.on{background:var(--mint);color:var(--g);font-weight:700}
+.bubble{max-width:64%;padding:10px 15px;border-radius:14px;font-size:14px;margin-bottom:10px}
 .bubble.in{background:#fff;border:1px solid var(--bd)}
 .bubble.out{background:var(--g);color:#fff;margin-left:auto}
-.okbig{width:92px;height:92px;border-radius:50%;background:var(--gl);color:var(--g);font-size:48px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
-footer{background:#0d3d30;color:#cfe3da;margin-top:40px}
-.fwrap{max-width:1180px;margin:0 auto;padding:30px 22px;display:flex;gap:40px;flex-wrap:wrap;font-size:13.5px}
-.fwrap b{color:#fff;display:block;margin-bottom:10px;font-size:14px}
-.fwrap a{color:#cfe3da;text-decoration:none;display:block;margin-bottom:6px}
-.copy{max-width:1180px;margin:0 auto;padding:14px 22px;border-top:1px solid rgba(255,255,255,.12);font-size:12.5px;opacity:.7}
-@media(max-width:900px){.fltside{flex-direction:column}.filters{width:100%}.hero .inner{padding:26px}.hero h1{font-size:26px}nav.main{display:none}}
+@media(max-width:1000px){nav.main{display:none}.sidebar{display:none} .fwrap{grid-template-columns:1fr 1fr}}
 </style></head><body>
-<header><div class="hwrap">
-<a class="logo" href="index.html"><span class="mark">🌿</span>HealthBridge</a>
-<nav class="main">
-<a href="index.html">Головна</a>
-<a href="search.html">Пошук</a>
-<a href="index.html#dirs">Напрямки</a>
-<a href="appointments.html">Мої записи</a>
-<a href="favorites.html">Обране</a>
-<a href="messages.html">Повідомлення</a>
-</nav>
-<div class="hbtns">
-<a class="btn ghost sm" href="cabinet.html" style="border-color:#0c6a4e">👤 Кабінет</a>
-<a class="btn sm" href="login.html">Увійти</a>
-</div></div></header>
-<main class="container" style="padding:40px 22px 70px;max-width:520px">
-<div class="card" style="padding:34px">
-<h1 class="page" style="text-align:center">Вхід до HealthBridge</h1>
-<div class="tabs" style="justify-content:center"><span class="tab on">Пацієнт</span><span class="tab">Лікар / клініка</span></div>
-<div class="formrow one"><div><label class="in">Email або телефон</label><input class="in" placeholder="you@example.com"/></div></div>
-<div class="formrow one"><div><label class="in">Пароль</label><input class="in" type="password" placeholder="••••••••"/></div></div>
-<button class="btn" style="width:100%">Увійти</button>
-<div style="text-align:center;font-size:13.5px;color:var(--mu);margin:14px 0">або</div>
-<button class="btn ghost" style="width:100%">🔵 Продовжити з Google</button>
-<div style="text-align:center;font-size:13.5px;margin-top:16px">Немає акаунту? <a href="login.html" style="color:var(--g);font-weight:700">Зареєструватися</a> · <a href="login.html" style="color:var(--mu)">Забули пароль?</a></div>
+<header class="top"><div class="hwrap">
+<a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 21C3 11.1 11.1 3 21 3c0 9.9-8.1 18-18 18z" fill="#1D7457"/><path d="M7 17C10 12 14 8 19 5" stroke="#EAF5F0" stroke-width="1.4" stroke-linecap="round"/></svg><span style="font-size:21px;font-weight:800">Violla</span><span>Здоров'я · Гармонія · Життя</span></a>
+<nav class="main"><a href="index.html" class="act">Головна</a><a href="search.html">Пошук</a><a href="search.html">Професіонали</a><a href="clinics.html">Клініки</a><a href="directions.html">Методи</a><a href="about.html">Про платформу</a></nav>
+<div class="hright"><a class="ic" href="settings.html" title="Мова">🌐 UA ▾</a><a class="ic" href="favorites.html">♡</a><a class="ic" href="messages.html">🔔</a><a class="login" href="login.html">👤 Увійти</a></div>
+</div></header>
+<main class="wrap" style="padding:44px 24px 70px;max-width:460px">
+<div class="card" style="padding:32px;text-align:center">
+<div style="font-size:36px">🌿</div>
+<h1 class="page" style="font-size:22px;margin:8px 0 4px">Увійти в Violla</h1>
+<p class="mut" style="font-size:13px;margin-bottom:18px">Здоров'я · Гармонія · Життя</p>
+<div class="tabs" style="justify-content:center;margin-bottom:16px"><span class="t on">Пацієнт</span><span class="t">Фахівець</span><span class="t">Клініка</span></div>
+<div style="text-align:left">
+<label class="lbl">Email або телефон</label><input class="in" placeholder="you@example.com"/>
+<label class="lbl">Пароль</label><input class="in" type="password" placeholder="••••••••"/></div>
+<a class="btn pri" style="display:block;margin-top:18px" href="cabinet.html">Увійти</a>
+<div style="color:var(--mu);font-size:13px;margin:14px 0">або</div>
+<a class="btn ghost" style="display:block" href="cabinet.html">🔵 Продовжити з Google</a>
+<div style="font-size:12.5px;color:var(--mu);margin-top:14px">Немає акаунту? <a href="verification.html"><b>Зареєструватися</b></a> · <a href="#">Забули пароль?</a></div>
 </div></main>
 <footer><div class="fwrap">
-<div style="min-width:200px"><b>🌿 HealthBridge</b>
-<div style="opacity:.8;max-width:300px">Українська платформа онлайн-запису до лікарів і доглядових спеціалістів. Перевірені профілі, чесні відгуки, зручне бронювання.</div></div>
-<div><b>Пацієнтам</b><a href="search.html">Знайти лікаря</a><a href="appointments.html">Мої записи</a><a href="favorites.html">Обране</a><a href="messages.html">Повідомлення</a></div>
-<div><b>Фахівцям</b><a href="cabinet.html">Кабінет пацієнта</a><a href="verification.html">Верифікація профілю</a><a href="login.html">Вхід для лікаря</a></div>
-<div><b>Компанія</b><a href="index.html">Про нас</a><a href="index.html#dirs">Напрямки</a><a href="search.html">Усі спеціалісти</a></div>
-</div><div class="copy">© 2026 HealthBridge · Зроблено в Україні 🇺🇦 · Дизайн за макетами Violla</div></footer>
+<div><b style="font-size:16px">🌿 Violla</b>
+<div style="opacity:.85;max-width:300px;margin-bottom:12px">Здоров'я · Гармонія · Життя. Міжнародна платформа інтегративної медицини: перевірені лікарі й спеціалісти, зручний онлайн-запис, геопошук поруч із вами.</div>
+<span style="font-size:12px">🌍 Працюємо у багатьох країнах</span></div>
+<div><b>Професіоналам</b><a href="verification.html">Стати фахівцем</a><a href="pro.html">Професійна панель</a><a href="verification.html">Верифікація профілю</a><a href="seo.html">SEO-сторінка фахівця</a></div>
+<div><b>Клінікам</b><a href="clinics.html">Додати клініку</a><a href="clinic_panel.html">Панель клініки</a><a href="widget.html">Віджет бронювання</a></div>
+<div><b>Пацієнтам</b><a href="search.html">Знайти фахівця</a><a href="map.html">Карта фахівців</a><a href="appointments.html">Мої записи</a><a href="cabinet.html">Особистий кабінет</a></div>
+<div><b>Довідка</b><a href="directions.html">Напрямки й методи</a><a href="sitemap.html">Карта сайту</a><a href="about.html">Про платформу</a><a href="settings.html">Налаштування</a></div>
+</div><div class="copy">© 2026 Violla · Зроблено з турботою · Дизайн за наданими макетами</div></footer>
 </body></html>

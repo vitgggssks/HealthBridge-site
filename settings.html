@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk"><head><meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Особистий кабінет — Violla</title><style>
+<title>Налаштування — Violla</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--g:#1D7457;--gd:#123B2B;--mint:#EAF5F0;--bg:#F3F8F6;--bd:#E0EDE7;--tx:#17332B;--mu:#6E8B83;--star:#F0A734}
 html{scroll-behavior:smooth}
@@ -82,36 +82,31 @@ label.lbl:first-child{margin-top:0}
 <nav class="main"><a href="index.html" class="act">Головна</a><a href="search.html">Пошук</a><a href="search.html">Професіонали</a><a href="clinics.html">Клініки</a><a href="directions.html">Методи</a><a href="about.html">Про платформу</a></nav>
 <div class="hright"><a class="ic" href="settings.html" title="Мова">🌐 UA ▾</a><a class="ic" href="favorites.html">♡</a><a class="ic" href="messages.html">🔔</a><a class="login" href="login.html">👤 Увійти</a></div>
 </div></header>
-<main class="wrap" style="padding:26px 24px 50px">
-<h1 class="page">Особистий кабінет</h1>
+<main class="wrap" style="padding:26px 24px 50px;max-width:860px">
+<h1 class="page">Налаштування</h1>
 <div style="display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap">
-<div class="card sidebar" style="padding:18px;text-align:center">
-<div style="width:96px;height:96px;border-radius:48px;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:800;color:var(--g);margin:4px auto 10px">А</div>
-<b style="font-size:17px">Анна Коваленко</b>
-<div class="mut" style="font-size:12.5px;margin:4px 0 12px">anna@gmail.com</div>
-<span class="chip">Пацієнт</span>
-<div style="text-align:left;margin-top:18px">
-<a class="sn on" href="cabinet.html">👤 Особисті дані</a>
-<a class="sn" href="appointments.html">📅 Мої записи</a>
-<a class="sn" href="favorites.html">♡ Обране</a>
-<a class="sn" href="messages.html">💬 Повідомлення</a>
-<a class="sn" href="settings.html">⚙️ Налаштування</a></div></div>
+<div class="card sidebar" style="padding:14px 10px">
+<a class="sn on" href="settings.html">⚙️ Основні</a>
+<a class="sn" href="settings.html">🔐 Безпека</a>
+<a class="sn" href="settings.html">🛡️ Приватність</a>
+<a class="sn" href="settings.html">🌍 Мова</a>
+<a class="sn" href="settings.html">🔔 Сповіщення</a>
+<a class="sn" href="settings.html">❓ Допомога</a></div>
 <div style="flex:1;min-width:300px">
-<div class="card" style="padding:20px;margin-bottom:14px"><b style="color:var(--gd)">👤 Особисті дані</b>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-<div><label class="lbl">Ім'я</label><input class="in" value="Анна"/></div>
-<div><label class="lbl">Прізвище</label><input class="in" value="Коваленко"/></div>
-<div><label class="lbl">Телефон</label><input class="in" value="+380 67 000 00 00"/></div>
-<div><label class="lbl">Email</label><input class="in" value="anna@gmail.com"/></div>
-<div><label class="lbl">Місто</label><input class="in" value="Київ"/></div>
-<div><label class="lbl">Дата народження</label><input class="in" value="1990-01-15"/></div></div>
-<button class="btn pri sm" style="margin-top:14px">Зберегти</button></div>
-<div class="card" style="padding:20px;margin-bottom:14px"><b style="color:var(--gd)">📅 Найближчі записи</b>
-<div style="font-size:13.5px;margin-top:10px">1 жовтня, 14:30 — Олена Коваленко (невролог) <a href="appointments.html">деталі →</a></div>
-<div style="font-size:13.5px;margin-top:6px">3 жовтня, 11:00 — Іван Петренко (кардіолог)</div></div>
-<div class="card" style="padding:20px"><b style="color:var(--gd)">📄 Медичні документи</b>
-<div style="font-size:13.5px;margin-top:10px">🧾 Висновок невролога від 21.09.2026 — <a href="#">завантажити</a></div>
-<div style="font-size:13.5px;margin-top:6px">🩸 Загальний аналіз крові від 05.09.2026 — <a href="#">завантажити</a></div></div>
+<div class="card" style="padding:20px;margin-bottom:14px"><b style="color:var(--gd)">🌍 Мова інтерфейсу</b>
+<div style="margin-top:12px">
+<label class="checkrow" style="background:var(--mint);border-radius:10px;padding:9px 12px"><input type="radio" name="lng" checked/> Українська</label>
+<label class="checkrow" style="padding:9px 12px"><input type="radio" name="lng"/> English</label>
+<label class="checkrow" style="padding:9px 12px"><input type="radio" name="lng"/> Deutsch</label>
+<label class="checkrow" style="padding:9px 12px"><input type="radio" name="lng"/> Polski</label>
+<label class="checkrow" style="padding:9px 12px"><input type="radio" name="lng"/> Français</label></div></div>
+<div class="card" style="padding:20px;margin-bottom:14px"><b style="color:var(--gd)">🔔 Сповіщення</b>
+<label class="checkrow" style="margin-top:10px"><input type="checkbox" checked/> Нагадування про записи (email + push)</label>
+<label class="checkrow"><input type="checkbox" checked/> Відповіді фахівців у чаті</label>
+<label class="checkrow"><input type="checkbox"/> Пропозиції та акції клінік</label></div>
+<div class="card" style="padding:20px;display:flex;justify-content:space-between;align-items:center">
+<div><b style="color:var(--gd)">🌙 Темна тема</b><div class="mut" style="font-size:12.5px">Автоматично залежно від пристрою</div></div>
+<input type="checkbox" style="width:20px;height:20px"/></div>
 </div></div>
 </main>
 <footer><div class="fwrap">
